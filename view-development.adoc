@@ -1,4 +1,4 @@
-# Development view - Tickle
+# Development - Tickle
 :sectnumlevels: 4
 :toclevels: 4
 :sectnums: 4
@@ -85,9 +85,29 @@ ClientApi: The api consumed by end-users/customers, for example via the mobile a
 
 *Storage*
 
-The Tickle clientApi 
+The clientApi uses Google Cloud Storage to store all swagger related files. You'll find these in the bucket *tickle-prod-clientapi-storage-euw2-deployments* under the directory *swagger.ui/*
+
+Upon each build that is run, you'll see all files within the swagger.ui directory are updated as per the openApi.yaml config
+
+https://storage.cloud.google.com/tickle-prod-clientapi-storage-euw2-deployments/swagger.ui/openApi.yaml
 
 *Build*
+
+The following steps detail how to run a build using Google CloudBuild to build the clientApi component:
+
+1) Navigate to Google Cloud Console: https://console.cloud.google.com/
+
+2) Search for Cloud Build service
+
+3) In the left hand pane, click 'Triggers'
+
+4) You will see a build trigger labeled Tickle-Prod-ClientApi, in the furthest right hand column click 'RUN'
+
+5) This opens a config view, you should not need to change any variables but ensure the branch is correct.
+
+6) Click 'Run Trigger'
+
+You can find out more info related to clientApi cloud build here [link to repo]
 
 *Outputs*
 
@@ -95,11 +115,25 @@ The Tickle clientApi artifacts produced after a deployment will be:
 
 - API Gateway Google Cloud Functions 
 
-- Google Cloud Storage bucket  tickle-<env>-clientapi-storage-euw2-deployments
+- Google Cloud Storage bucket i.e.  *tickle-<env>-clientapi-storage-euw2-deployments*
 
 - Swagger documentation
 
-- Consumable API Gateway URL i.e. https://tickle-dev-clientapi-apigw-gateway-c9k1ab77.nw.gateway.dev/swagger-ui/index.ht
+- Consumable API Gateway URL i.e. https://tickle-dev-clientapi-apigw-gateway-c9k1ab77.nw.gateway.dev/swagger-ui/index.html
+
+You can check the correct API Gateway URL for the environment by following these steps:
+
+1) Navigate to Google Cloud Console: https://console.cloud.google.com/
+
+2) Search for API gateway service
+
+3) Ensure you have the correct project selected i.e. *Tickle-prod*
+
+4) Select *tickle-<env>-clientapi-apigw-api*
+
+5) Click 'Gateways' and you will see the API Gateway URL
+
+
 
 ====
 AdminApi: The api consumed by Tickle admin and brands, for example via the brand portal
