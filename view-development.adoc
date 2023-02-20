@@ -110,39 +110,6 @@ There are other accessibility standards. Be careful to correctly assess the targ
 
 ====
 
-### Ergonomics
-
-#### Ergonomic charter
-
-[TIP]
-====
-In general, we refer here to the body's ergonomic charter. List any specificities. Do not duplicate here the accessibility constraints listed above.
-====
- 
-#### Specificities on widgets
-
-[TIP]
-====
-Very precise ergonomic behavior can have a fairly strong impact on the architecture and impose a library of graphic components or another. It is strongly advised not to customize existing libraries (high maintenance cost, high complexity).
-====
-====
-Example 1: The tables must be sortable according to several columns.
-====
-====
-Example 2: Most screens will be fitted with accordions.
-====
-
-#### Fonts
-
-[TIP]
-====
-Describe here the fonts to use for web pages, applications, or generated documents.
-
-The choice of fonts follows licensing constraints. In order to ensure legal security aspects of the project, pay attention to commercial policies subject to royalties (in particular policies of Microsoft such as Times New Roman, Courier, Verdana, Arial) and which do not allow to produce documents without going through their editors (Word, ...).
-
-Redhat, for instance, provides four families of TrueType fonts (Liberation) under an Open Source license that is legally secure and compatible with the Monotype, Courier-New, Arial and Times New Roman.
-====
-
 #### Responsive website
 
 [TIP]
@@ -156,17 +123,6 @@ List the multi-media display constraints. When possible, use modern frameworks (
 ====
 
 WARNING: A responsive design comes with its constraints (code duplication, increase in the volume of data to be downloaded by the client, complexity, more end-to-end tests to be expected…).
-
-
-#### Progressive Web Apps (PWA)
-
-[TIP]
-====
-Specify whether the application is progressive. PWA applications are HTML5 web applications having all the attributes of native applications (offline-first, fast, adaptive, accessible from the OS, ...)
-====
-====
-Example: Application X will be fully PWA. Tests will have to demonstrate that the site will continue to operate with the network shutdown and that the pages load in less than 5 seconds using 4G Mobile Internet access.
-====
 
 #### Supported browsers
 
@@ -189,59 +145,6 @@ Example 2: Application Y being an internet application targeting the widest poss
 ====
 ====
 Example 3: Application Z is aimed at the broadest audience and with reasonably old systems and will therefore have to support: Firefox 6+, Chrome 8+, Opera 8+, IE 10, Edge.
-====
-
-#### Internationalization (i18n)
-
-[TIP]
-====
-Specify the constraints of the application in terms of i18n: location of labels, direction of the text, adaptable layout, specific color code, date format, currencies, display of decimal separators, etc.
-====
-====
-Example 1: The GUI X will be translated into 25 languages ​​including some Asian languages ​​and Arabic.
-====
-====
-Example 2: Date formats and other input fields must be perfectly localized for maximum user convenience.
-====
-
-#### Offline mode
-
-[TIP]
-====
-Specify whether the application must be able to continue to function without Internet or LAN access (very common for applications used by professionals on the move for example).
-
-These can be classic heavy clients (Java, C, ...) having their local database that can be synchronized back to the office. They can also be PWA applications (see above) using a service worker for static resources and browser storage (local storage, IndexedDB database).
-====
-====
-Example 1: The application will be developed in Java Swing with local storage based on an H2 database synchronized with the common database by REST calls.
-====
-====
-Example 2: The mobile application will be in PWA mode, entirely written in HTML5 with local storage to store the day's data into the browser.
-====
-
-### SEO Requirements
-
-[TIP]
-====
-SEO (Search engine optimization) concerns the visibility of a website through search engines (like Google or Baidu).
-====
-====
-Example 1: No indexing necessary or desired (Intranet site).
-====
-====
-Example 2: The static pages of the site must follow good SEO practices to optimize its visibility.
-====
-
-### Ecodesign requirements
-
-[TIP]
-====
-Ecodesign consists of limiting the environmental impact of the software and hardware used by the application. The requirements in this area are generally expressed in WH or CO2 equivalent.
-
-List the eco-design requirements relating to software here.
-====
-====
-Example: The average power consumption caused by the display of a Web page must not exceed 10mWH, i.e. for 10K users who display on average 100 pages 200 J per year: 50 g/KWH x 10mWH x 100 x 10K x 200 = 100 Kg CO2 equivalent / year.
 ====
 
 ## Target architecture
