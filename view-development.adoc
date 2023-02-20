@@ -73,8 +73,6 @@ Example 2: The module should be based on the JPA framework for persistence
 Example 3: The application will be built, tested and deployed continuously with each push via the Gitlab-CI platform
 ====
 
-## Non-functional requirements
-
 [TIP]
 ====
 Contrary to the constraints which fixed the framework to which any application had to conform, the non-functional requirements were given by the project decision-makers. Schedule interviews to determine them. If some requirements are not realistic, mention this in the reference points to be decided.
