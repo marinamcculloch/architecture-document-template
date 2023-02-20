@@ -79,9 +79,10 @@ tickleglobal-tickle-server-dotnet
 
 This is the server repository for Tickle. It is primarily a .Net C# project deployed to GCP Cloud Functions. The server is split into 3 modules
 
-====
-ClientApi: The api consumed by end-users/customers, for example via the mobile apps
-====
+
+#### ClientApi
+The api consumed by end-users/customers, for example via the mobile apps
+
 
 *Storage*
 
@@ -135,9 +136,9 @@ You can check the correct API Gateway URL for the environment by following these
 
 
 
-====
-AdminApi: The api consumed by Tickle admin and brands, for example via the brand portal
-====
+#### AdminApi
+The api consumed by Tickle admin and brands, for example via the brand portal
+
 
 *Storage*
 
@@ -145,9 +146,10 @@ AdminApi: The api consumed by Tickle admin and brands, for example via the brand
 
 *Outputs*
 
-====
-Core: Components that manage the underlying system and data used by the api Additionally, this repo contains the Web Terraform module which deploys the infrastructure to host the front-end projects
-====
+
+#### Core 
+Components that manage the underlying system and data used by the api Additionally, this repo contains the Web Terraform module which deploys the infrastructure to host the front-end projects
+
 
 *Storage*
 
