@@ -63,35 +63,6 @@ List here the constraints related to the software architecture, this includes fo
 * Test methods and objectives (coverage rate, breakdown by type of test, etc.)
 
 ====
-====
-Example 1: Code coverage should be at least 60%
-====
-====
-Example 2: The module should be based on the JPA framework for persistence
-====
-====
-Example 3: The application will be built, tested and deployed continuously with each push via the Gitlab-CI platform
-====
-
-## Non-functional requirements
-
-[TIP]
-====
-Contrary to the constraints which fixed the framework to which any application had to conform, the non-functional requirements were given by the project decision-makers. Schedule interviews to determine them. If some requirements are not realistic, mention this in the reference points to be decided.
-====
-
-### Accessibility
-
-[TIP]
-====
-Should this application be accessible to the blind/visually impaired? deaf person?
-
-If so, what level of accessibility?
-Preferably refer to the Web Content Accessibility Guidelines (https://www.w3.org/TR/WCAG20/[WCAG 2.0]).
-
-There are other accessibility standards. Be careful to correctly assess the target level (neither over-quality nor under-quality):
-
-====
 
 #### Responsive website
 
@@ -114,11 +85,6 @@ WARNING: A responsive design comes with its constraints (code duplication, incre
 Specify which browsers are supported if your project comes with a Web GUI.
 
 When addressing an audience whose you do not manage browsers (such as a website on the Internet), the best option to make things intelligible and clarify the issues is to negotiate with the stakeholders of the project a minimum percentage audience supported based on https://gs.statcounter.com/ouvernstatistics]. For example: "Support 95% of browsers".
-
-====
-
-WARNING: Supporting old browsers (IE in particular) can generate prohibitive additional costs and security issues. In all cases, the additional costs of testing on multiple platforms should be assessed. There are good (paid) tools like Litmus or EmailOnAcid to render websites and HTML emails on a combination of OS / player type (PC / tablet / mobile) / browser very large (in the order of 50). This type of site is essential for a general public application.
-
 
 ====
 Example 1: The intranet application X must work on internally qualified browsers (see [Ref xyz])
