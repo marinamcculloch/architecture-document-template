@@ -10,7 +10,7 @@
 
 *Last global review* : _<perform regular global reviews of the view at least once a year while the project is active and mention the date here>_
 
-*Document status* :  _WIP_
+*Document status* :  _<WIP>_
 
 ## Introduction
 
@@ -72,6 +72,25 @@ Example 2: The module should be based on the JPA framework for persistence
 ====
 Example 3: The application will be built, tested and deployed continuously with each push via the Gitlab-CI platform
 ====
+
+## Non-functional requirements
+
+[TIP]
+====
+Contrary to the constraints which fixed the framework to which any application had to conform, the non-functional requirements were given by the project decision-makers. Schedule interviews to determine them. If some requirements are not realistic, mention this in the reference points to be decided.
+====
+
+#### Responsive website
+
+[TIP]
+====
+List the multi-media display constraints. When possible, use modern frameworks (such as AngularJS or React.js). There are several levels of adaptation of web pages:
+
+* Static (fixed page width).
+* Dynamic (automatic resizing, sizes are expressed in %).
+* Adaptive (distances are expressed in units, the size of which depends on the support).
+* Responsive (the content and its layout depend on the medium).
+
 
 ====
 
