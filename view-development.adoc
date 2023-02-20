@@ -71,7 +71,57 @@ Example 2: The module should be based on the JPA framework for persistence
 Example 3: The application will be built, tested and deployed continuously with each push via the Gitlab-CI platform
 ====
 
-## Target architecture
+## Backend architecture
+
+### Backend Components 
+
+tickleglobal-tickle-server-dotnet
+
+This is the server repository for Tickle. It is primarily a .Net C# project deployed to GCP Cloud Functions. The server is split into 3 modules
+
+====
+ClientApi: The api consumed by end-users/customers, for example via the mobile apps
+====
+
+*Storage*
+
+The Tickle clientApi 
+
+*Build*
+
+*Outputs*
+
+The Tickle clientApi artifacts produced after a deployment will be:
+
+- API Gateway Google Cloud Functions 
+
+- Google Cloud Storage bucket  tickle-<env>-clientapi-storage-euw2-deployments
+
+- Swagger documentation
+
+- Consumable API Gateway URL i.e. https://tickle-dev-clientapi-apigw-gateway-c9k1ab77.nw.gateway.dev/swagger-ui/index.ht
+
+====
+AdminApi: The api consumed by Tickle admin and brands, for example via the brand portal
+====
+
+*Storage*
+
+*Build*
+
+*Outputs*
+
+====
+Core: Components that manage the underlying system and data used by the api Additionally, this repo contains the Web Terraform module which deploys the infrastructure to host the front-end projects
+====
+
+*Storage*
+
+*Build*
+
+*Outputs*
+
+
 
 ### Software stack
 
@@ -123,13 +173,8 @@ Even though performance campaigns are planned, experience shows that most of per
 
 Backend side:
 
-* Make sure that the server paging goes from the service call until the database (use `FETCH FIRST x ROWS ONLY` and https://www.postgresqltutorial.com/postgresql-fetch/[not `LIMIT` and `OFFSET`]).
-* Do not put in place unnecessary constraints in the database.
-* In cases of very large volumes (from hundreds of millions), use database table partitioning.
+
 * Don't forget to add all the necessary indexes, use the analysis of the execution plan to verify the absence of full scans.
-* Beware of SQL functions that 'break' indexes (like `UPPER()`) or use function indexes. Give priority to processing on the backend code side if possible.
-* Activate the query logs (Hibernate example: `org.hibernate.SQL = DEBUG`,`-Dhibernate.generate_statistics = true`) and check the SQL queries and their number (to detect in particular the very common https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping[SELECT N + 1] issue).
-* Have a minimum data set (more than one hundred records) even on a workstation.
 * Check with a profiler (like VisualVM in Java) the memory consumption to detect leaks or over-consumption.
 * Detect threads leaks or deadlock by counting the number of active threads over a significant duration (one full night for instance).
 * Stress the API _a minima_ (with injectors like JMeter or K6) using a progressive ramp.
