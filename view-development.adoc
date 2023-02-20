@@ -14,9 +14,7 @@
 
 ## Introduction
 
-This view describes the development aspects of the *Tickle* application. It describes the code produced. 
-
-The project glossary is available link:glossary.adoc[here]. We will not redefine the functional or technical terms used here.
+This view describes the development aspects of the *Tickle* application. It describes the code produced in the backend for *Tickle*, where to store Ads and how the Tickle app is built.  
 
 This document will be updated and maintained regularly and is not considered finished.
 
