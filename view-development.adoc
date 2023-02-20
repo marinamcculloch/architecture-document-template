@@ -1,4 +1,4 @@
-# Development view
+# Development view - Tickle
 :sectnumlevels: 4
 :toclevels: 4
 :sectnums: 4
@@ -14,7 +14,7 @@
 
 ## Introduction
 
-This view describes the development aspects of the application. It describes the code produced. 
+This view describes the development aspects of the *Tickle* application. It describes the code produced. 
 
 The project glossary is available link:glossary.adoc[here]. We will not redefine the functional or technical terms used here.
 
