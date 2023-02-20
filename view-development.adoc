@@ -90,31 +90,8 @@ List the multi-media display constraints. When possible, use modern frameworks (
 * Dynamic (automatic resizing, sizes are expressed in %).
 * Adaptive (distances are expressed in units, the size of which depends on the support).
 * Responsive (the content and its layout depend on the medium).
-====
-
-WARNING: A responsive design comes with its constraints (code duplication, increase in the volume of data to be downloaded by the client, complexity, more end-to-end tests to be expected…).
-
-#### Supported browsers
-
-[TIP]
-====
-Specify which browsers are supported if your project comes with a Web GUI.
-
-When addressing an audience whose you do not manage browsers (such as a website on the Internet), the best option to make things intelligible and clarify the issues is to negotiate with the stakeholders of the project a minimum percentage audience supported based on https://gs.statcounter.com/ouvernstatistics]. For example: "Support 95% of browsers".
-
-====
-
-WARNING: Supporting old browsers (IE in particular) can generate prohibitive additional costs and security issues. In all cases, the additional costs of testing on multiple platforms should be assessed. There are good (paid) tools like Litmus or EmailOnAcid to render websites and HTML emails on a combination of OS / player type (PC / tablet / mobile) / browser very large (in the order of 50). This type of site is essential for a general public application.
 
 
-====
-Example 1: The intranet application X must work on internally qualified browsers (see [Ref xyz])
-====
-====
-Example 2: Application Y being an internet application targeting the widest possible audience, including terminals in developing countries. It will have to support Firefox 3+, IE 8+, Opera 6+.
-====
-====
-Example 3: Application Z is aimed at the broadest audience and with reasonably old systems and will therefore have to support: Firefox 6+, Chrome 8+, Opera 8+, IE 10, Edge.
 ====
 
 ## Target architecture
